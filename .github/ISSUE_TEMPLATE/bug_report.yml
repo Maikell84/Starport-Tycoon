@@ -1,0 +1,119 @@
+name: Bug melden / Report a bug
+description: Melde ein reproduzierbares Problem mit Starport Tycoon.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deine Meldung! Je genauer die Angaben sind, desto besser können wir den Fehler untersuchen.
+
+        Thanks for your report! Clear details make the issue much easier to investigate.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vorabprüfung / Before submitting
+      options:
+        - label: Ich habe nach bestehenden offenen und geschlossenen Issues gesucht. / I searched existing open and closed issues.
+          required: true
+        - label: Ich verwende die neueste mir verfügbare Spielversion. / I am using the latest game version available to me.
+          required: true
+        - label: Meine Anhänge enthalten keine persönlichen oder vertraulichen Daten. / My attachments contain no personal or confidential data.
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Bereich / Area
+      options:
+        - Start oder Absturz / Startup or crash
+        - Spielstand / Save or load
+        - Benutzeroberfläche / User interface
+        - Spielmechanik oder Balancing / Gameplay or balancing
+        - Performance
+        - Grafik / Graphics
+        - Audio
+        - Übersetzung / Localization
+        - Steam-Integration
+        - Sonstiges / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problembeschreibung / Description
+      description: Was ist passiert? Bitte beschreibe das Problem möglichst konkret.
+      placeholder: "Beispiel: Beim Öffnen der Flottenansicht ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Schritte zum Reproduzieren / Steps to reproduce
+      description: Welche Schritte führen zuverlässig zu dem Problem?
+      placeholder: |
+        1. Spielstand laden ...
+        2. ... öffnen
+        3. ... auswählen
+        4. Fehler tritt auf
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten / Expected behaviour
+      placeholder: Was hätte stattdessen passieren sollen?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Spielversion und Build / Game version and build
+      description: Diese Angaben findest du im Hauptmenü oder unter „Über Starport Tycoon“.
+      placeholder: "z. B. 0.3.6, Build ..."
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Betriebssystem / Operating system
+      placeholder: "z. B. Windows 11 24H2"
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Spielsprache / Game language
+      placeholder: "z. B. Deutsch oder English"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Häufigkeit / Frequency
+      options:
+        - Immer / Always
+        - Häufig / Often
+        - Manchmal / Sometimes
+        - Einmal / Once
+        - Unbekannt / Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Anhänge und weitere Informationen / Attachments and additional context
+      description: Ziehe Screenshots, Videos oder geeignete Log-/Spielstanddateien hier hinein. Entferne vorher persönliche Daten.
+      placeholder: Hardware, Fehlermeldungen, Screenshots, Logs oder weitere Beobachtungen ...
+    validations:
+      required: false

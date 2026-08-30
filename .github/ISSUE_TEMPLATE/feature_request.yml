@@ -1,0 +1,63 @@
+name: Idee vorschlagen / Suggest an idea
+description: Schlage eine Funktion oder Verbesserung für Starport Tycoon vor.
+title: "[Idea]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für deine Idee! Beschreibe bitte vor allem das Problem oder den Nutzen – so lassen sich verschiedene Lösungen besser bewerten.
+
+        Thanks for your idea! Please focus on the problem and player benefit so different solutions can be considered.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vorabprüfung / Before submitting
+      options:
+        - label: Ich habe nach ähnlichen offenen und geschlossenen Issues gesucht. / I searched for similar open and closed issues.
+          required: true
+        - label: Diese Meldung enthält nur einen klar abgegrenzten Vorschlag. / This issue contains one focused suggestion.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Ausgangslage / Problem or opportunity
+      description: Welches Problem würde die Idee lösen oder welche Erfahrung verbessern?
+      placeholder: "Wenn ich ..., ist es schwierig zu ..., weil ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Vorschlag / Proposed solution
+      description: Wie könnte die Funktion oder Verbesserung aussehen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Nutzen / Player benefit
+      description: Für welche Spieler oder Situationen wäre das besonders hilfreich?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativen / Alternatives
+      description: Welche anderen Lösungen oder Workarounds hast du erwogen?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Weitere Informationen / Additional context
+      description: Mockups, Screenshots, Beispiele oder weitere Gedanken können hier ergänzt werden.
+    validations:
+      required: false
